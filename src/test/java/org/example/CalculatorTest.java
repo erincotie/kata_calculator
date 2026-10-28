@@ -51,4 +51,9 @@ class CalculatorTest {
     void twoNumbersSpecifyingSeparatorReturnsSum(){
         assertEquals("6", calc.add("//;\n1;2;3"));
     }
+
+    @Test
+    void specifyinfSeparatorIsTwoCharReturnsSum(){
+        assertEquals("6", calc.add("//::\n1::2::3"));
+    }
 }
