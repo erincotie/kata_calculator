@@ -26,4 +26,9 @@ class CalculatorTest {
     void notAnIntStringReturnsEmpty(){
         assertEquals(calc.add("abc"), "");
     }
+
+    @Test
+    void twoNumbersSeparatedbyCommasReturnsSumString(){
+        assertEquals(calc.add("1,2"),"3");
+    }
 }
