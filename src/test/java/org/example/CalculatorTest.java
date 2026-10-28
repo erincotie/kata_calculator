@@ -21,4 +21,9 @@ class CalculatorTest {
     void oneNumberStringReturnsSameString(){
         assertEquals(calc.add("1"), "1");
     }
+
+    @Test
+    void notAnIntStringReturnsEmpty(){
+        assertEquals(calc.add("abc"), "");
+    }
 }
