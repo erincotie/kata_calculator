@@ -11,6 +11,9 @@ public class Calculator {
             for (String numero : numeros) {
                 suma += Float.parseFloat(numero);
             }
+            if (suma == (int) suma) {
+                return String.valueOf((int) suma);
+            }
             return String.valueOf(suma);
         } catch (Exception e) {
             return "";
