@@ -46,4 +46,9 @@ class CalculatorTest {
     void twoFloatsReturnsSumString(){
         assertEquals("3.3", calc.add("1.2,2.1"));
     }
+
+    @Test
+    void twoNumbersSpecifyingSeparatorReturnsSum(){
+        assertEquals("6", calc.add("//;\n1;2;3"));
+    }
 }
