@@ -31,4 +31,9 @@ class CalculatorTest {
     void twoNumbersSeparatedbyCommasReturnsSumString(){
         assertEquals(calc.add("1,2"),"3");
     }
+
+    @Test
+    void twoNumbersNotSeparatedByCommasReturnsEmpty(){
+        assertEquals(calc.add("1.2"),"");
+    }
 }
