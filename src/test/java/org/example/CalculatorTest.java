@@ -14,31 +14,36 @@ class CalculatorTest {
     }
     @Test
     void emptyStringReturnsZeroString(){
-        assertEquals(calc.add(""),"0");
+        assertEquals("0", calc.add(""));
     }
 
     @Test
     void oneNumberStringReturnsSameString(){
-        assertEquals(calc.add("1"), "1");
+        assertEquals("1", calc.add("1"));
     }
 
     @Test
     void notAnIntStringReturnsEmpty(){
-        assertEquals(calc.add("abc"), "");
+        assertEquals("", calc.add("abc"));
     }
 
     @Test
     void twoNumbersSeparatedByCommasReturnsSumString(){
-        assertEquals(calc.add("1,2"),"3");
+        assertEquals("3", calc.add("1,2"));
     }
 
     @Test
     void twoNumbersNotSeparatedByCommasReturnsEmpty(){
-        assertEquals(calc.add("1.2"),"");
+        assertEquals("", calc.add("1.2"));
     }
 
     @Test
     void moreThanTwoNumbersSeparatedByCommasReturnsSumString(){
-        assertEquals(calc.add("1,2,3,4"),"10");
+        assertEquals("10", calc.add("1,2,3,4"));
+    }
+
+    @Test
+    void twoFloatsReturnsSumString(){
+        assertEquals("3.3", calc.add("1.2,2.1"));
     }
 }
