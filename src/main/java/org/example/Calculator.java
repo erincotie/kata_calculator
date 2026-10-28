@@ -7,12 +7,12 @@ public class Calculator {
 
         try {
             String[] numeros= entrada.split(",");
-            int suma = 0;
+            float suma = 0;
             for (String numero : numeros) {
-                suma += Integer.parseInt(numero);
+                suma += Float.parseFloat(numero);
             }
             return String.valueOf(suma);
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             return "";
         }
     }
