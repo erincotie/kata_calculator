@@ -28,12 +28,17 @@ class CalculatorTest {
     }
 
     @Test
-    void twoNumbersSeparatedbyCommasReturnsSumString(){
+    void twoNumbersSeparatedByCommasReturnsSumString(){
         assertEquals(calc.add("1,2"),"3");
     }
 
     @Test
     void twoNumbersNotSeparatedByCommasReturnsEmpty(){
         assertEquals(calc.add("1.2"),"");
+    }
+
+    @Test
+    void moreThanTwoNumbersSeparatedByCommasReturnsSumString(){
+        assertEquals(calc.add("1,2,3,4"),"10");
     }
 }
