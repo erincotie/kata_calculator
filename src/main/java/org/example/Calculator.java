@@ -5,8 +5,9 @@ public class Calculator {
     public String add(String entrada){
         if (entrada.isEmpty()) return "0";
         if(entrada.startsWith("//")){
-            String separador = String.valueOf(entrada.charAt(2));
-            return getString(entrada.substring(3), separador);
+            int startIndexNumbers = entrada.indexOf('\n');
+            String separador = entrada.substring(2, startIndexNumbers);
+            return getString(entrada.substring(startIndexNumbers+1), separador);
         }
         else return getString(entrada, ",");
     }
